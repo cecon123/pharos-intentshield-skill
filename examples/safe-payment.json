@@ -1,0 +1,39 @@
+{
+  "intentId": "intent-safe-001",
+  "agentId": "pharos-merchant-agent",
+  "chainId": 50002,
+  "action": "pay",
+  "asset": {
+    "symbol": "USDC",
+    "address": "0x0000000000000000000000000000000000000001",
+    "amount": 12.5,
+    "decimals": 6
+  },
+  "recipient": {
+    "address": "0x1111111111111111111111111111111111111111",
+    "label": "Verified merchant invoice INV-1001",
+    "trustTier": "verified"
+  },
+  "limits": {
+    "maxAmountUsd": 100,
+    "dailyBudgetUsd": 250,
+    "maxSlippageBps": 100,
+    "allowedChains": [50002],
+    "allowedActions": ["pay", "message"],
+    "blockUnknownRecipients": true,
+    "requireHumanApprovalAboveUsd": 50
+  },
+  "context": {
+    "estimatedValueUsd": 12.5,
+    "estimatedGasUsd": 0.02,
+    "slippageBps": 0,
+    "deadlineMinutes": 30,
+    "purpose": "Pay verified merchant invoice INV-1001 for hackathon API access.",
+    "dataSourceConfidence": 0.96,
+    "userConfirmation": true
+  },
+  "metadata": {
+    "source": "demo",
+    "environment": "pharos-testnet"
+  }
+}

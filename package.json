@@ -1,0 +1,34 @@
+{
+  "name": "pharos-intentshield-skill",
+  "version": "0.1.0",
+  "description": "Reusable policy and risk skill for AI agents before on-chain execution.",
+  "type": "module",
+  "license": "MIT",
+  "author": "mrcatcat1996",
+  "bin": {
+    "intentshield": "./bin/intentshield.js"
+  },
+  "scripts": {
+    "demo": "node bin/intentshield.js validate examples/unsafe-swap.json",
+    "validate:safe": "node bin/intentshield.js validate examples/safe-payment.json",
+    "validate:unsafe": "node bin/intentshield.js validate examples/unsafe-swap.json",
+    "mcp": "node src/mcp-server.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "pharos",
+    "agent-skill",
+    "mcp",
+    "web3",
+    "risk",
+    "policy",
+    "ai-agent"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.0.0-alpha.2",
+    "zod": "4.4.3"
+  }
+}

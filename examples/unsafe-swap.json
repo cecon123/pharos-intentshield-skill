@@ -1,0 +1,39 @@
+{
+  "intentId": "intent-block-001",
+  "agentId": "pharos-trading-agent",
+  "chainId": 999999,
+  "action": "swap",
+  "asset": {
+    "symbol": "USDC",
+    "address": "0x0000000000000000000000000000000000000001",
+    "amount": 600,
+    "decimals": 6
+  },
+  "recipient": {
+    "address": "0x3333333333333333333333333333333333333333",
+    "label": "Unverified pool",
+    "trustTier": "unknown"
+  },
+  "limits": {
+    "maxAmountUsd": 100,
+    "dailyBudgetUsd": 250,
+    "maxSlippageBps": 100,
+    "allowedChains": [50002],
+    "allowedActions": ["pay", "grant", "message"],
+    "blockUnknownRecipients": true,
+    "requireHumanApprovalAboveUsd": 50
+  },
+  "context": {
+    "estimatedValueUsd": 600,
+    "estimatedGasUsd": 9,
+    "slippageBps": 450,
+    "deadlineMinutes": 1,
+    "purpose": "Swap fast",
+    "dataSourceConfidence": 0.35,
+    "userConfirmation": false
+  },
+  "metadata": {
+    "source": "demo",
+    "environment": "unknown-chain"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "intentId": "intent-review-001",
+  "agentId": "pharos-grant-agent",
+  "chainId": 50002,
+  "action": "grant",
+  "asset": {
+    "symbol": "PROS",
+    "address": "0x0000000000000000000000000000000000000002",
+    "amount": 75,
+    "decimals": 18
+  },
+  "recipient": {
+    "address": "0x2222222222222222222222222222222222222222",
+    "label": "New grantee",
+    "trustTier": "known"
+  },
+  "limits": {
+    "maxAmountUsd": 100,
+    "dailyBudgetUsd": 250,
+    "maxSlippageBps": 100,
+    "allowedChains": [50002],
+    "allowedActions": ["pay", "grant", "message"],
+    "blockUnknownRecipients": true,
+    "requireHumanApprovalAboveUsd": 50
+  },
+  "context": {
+    "estimatedValueUsd": 75,
+    "estimatedGasUsd": 0.05,
+    "slippageBps": 0,
+    "deadlineMinutes": 30,
+    "purpose": "Release milestone grant after reviewer approval.",
+    "dataSourceConfidence": 0.82,
+    "userConfirmation": false
+  },
+  "metadata": {
+    "source": "demo",
+    "environment": "pharos-testnet"
+  }
+}

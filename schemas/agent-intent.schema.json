@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/intentshield/agent-intent.schema.json",
+  "title": "IntentShield Agent Intent",
+  "type": "object",
+  "required": ["intentId", "agentId", "chainId", "action", "asset", "recipient", "context"],
+  "properties": {
+    "intentId": { "type": "string", "minLength": 3 },
+    "agentId": { "type": "string", "minLength": 3 },
+    "chainId": { "type": "integer" },
+    "action": {
+      "type": "string",
+      "enum": ["pay", "swap", "approve", "deploy", "grant", "bridge", "message"]
+    },
+    "asset": {
+      "type": "object",
+      "required": ["symbol", "amount"],
+      "properties": {
+        "symbol": { "type": "string" },
+        "address": { "type": "string" },
+        "amount": { "type": "number", "exclusiveMinimum": 0 },
+        "decimals": { "type": "integer", "minimum": 0, "maximum": 36 }
+      }
+    },
+    "recipient": {
+      "type": "object",
+      "required": ["address", "trustTier"],
+      "properties": {
+        "address": { "type": "string", "pattern": "^0x[a-fA-F0-9]{40}$" },
+        "label": { "type": "string" },
+        "trustTier": {
+          "type": "string",
+          "enum": ["verified", "known", "unknown", "blocked"]
+        }
+      }
+    },
+    "limits": {
+      "type": "object",
+      "properties": {
+        "maxAmountUsd": { "type": "number", "minimum": 0 },
+        "dailyBudgetUsd": { "type": "number", "minimum": 0 },
+        "maxSlippageBps": { "type": "number", "minimum": 0 },
+        "allowedChains": { "type": "array", "items": { "type": "integer" } },
+        "allowedActions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["pay", "swap", "approve", "deploy", "grant", "bridge", "message"]
+          }
+        },
+        "allowContractDeploy": { "type": "boolean" },
+        "blockUnknownRecipients": { "type": "boolean" },
+        "requireHumanApprovalAboveUsd": { "type": "number", "minimum": 0 },
+        "maxGasToValueRatio": { "type": "number", "minimum": 0 }
+      }
+    },
+    "context": {
+      "type": "object",
+      "required": ["estimatedValueUsd", "estimatedGasUsd", "purpose"],
+      "properties": {
+        "estimatedValueUsd": { "type": "number", "minimum": 0 },
+        "estimatedGasUsd": { "type": "number", "minimum": 0 },
+        "slippageBps": { "type": "number", "minimum": 0 },
+        "deadlineMinutes": { "type": "number", "minimum": 0 },
+        "purpose": { "type": "string" },
+        "dataSourceConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "userConfirmation": { "type": "boolean" }
+      }
+    },
+    "metadata": { "type": "object" }
+  }
+}
