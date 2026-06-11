@@ -22,7 +22,7 @@ AI Agent, Agent Skill, MCP, Pharos, Web3, Risk, Policy, On-chain Safety
 
 ## Repository
 
-TBD after GitHub repo creation.
+https://github.com/cecon123/pharos-intentshield-skill
 
 ## Demo command
 
