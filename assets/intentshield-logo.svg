@@ -1,0 +1,42 @@
+<svg width="480" height="480" viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="48" y1="32" x2="432" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071724"/>
+      <stop offset="0.56" stop-color="#0A2630"/>
+      <stop offset="1" stop-color="#0E3B32"/>
+    </linearGradient>
+    <linearGradient id="shieldStroke" x1="116" y1="92" x2="372" y2="386" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5FF6C8"/>
+      <stop offset="1" stop-color="#24C6F3"/>
+    </linearGradient>
+    <linearGradient id="decision" x1="158" y1="226" x2="323" y2="190" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F9E270"/>
+      <stop offset="0.52" stop-color="#7CF6B8"/>
+      <stop offset="1" stop-color="#40D3FF"/>
+    </linearGradient>
+    <filter id="softShadow" x="48" y="48" width="384" height="384" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#02070B" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="480" height="480" rx="92" fill="url(#bg)"/>
+  <path d="M84 153H111M369 153H396M83 328H111M369 328H397M153 84V111M153 369V397M328 83V111M328 369V397" stroke="#9AF7DB" stroke-opacity="0.18" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="240" cy="240" r="173" stroke="#9AF7DB" stroke-opacity="0.12" stroke-width="2"/>
+  <circle cx="240" cy="240" r="151" stroke="#2CFFF0" stroke-opacity="0.16" stroke-width="2" stroke-dasharray="8 17"/>
+  <path d="M102 240C102 163.785 163.785 102 240 102C268.999 102 296.027 110.943 318.319 126.064" stroke="#58F5C7" stroke-width="8" stroke-linecap="round"/>
+  <path d="M378 240C378 316.215 316.215 378 240 378C210.58 378 183.308 368.796 160.92 353.269" stroke="#34D5FF" stroke-width="8" stroke-linecap="round"/>
+
+  <g filter="url(#softShadow)">
+    <path d="M240 82L366 136L342 313L240 397L138 313L114 136L240 82Z" fill="#102538" fill-opacity="0.92"/>
+    <path d="M240 82L366 136L342 313L240 397L138 313L114 136L240 82Z" stroke="url(#shieldStroke)" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M160 226L218 282L320 178" stroke="url(#decision)" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M218 282L292 306" stroke="#4BE7FF" stroke-width="12" stroke-linecap="round" stroke-opacity="0.9"/>
+    <circle cx="160" cy="226" r="15" fill="#F9E270" stroke="#102538" stroke-width="6"/>
+    <circle cx="218" cy="282" r="16" fill="#75F2B5" stroke="#102538" stroke-width="6"/>
+    <circle cx="320" cy="178" r="15" fill="#41D8FF" stroke="#102538" stroke-width="6"/>
+    <circle cx="292" cy="306" r="13" fill="#FF7C9B" stroke="#102538" stroke-width="6"/>
+  </g>
+
+  <path d="M198 129H282" stroke="#E9FFF8" stroke-opacity="0.42" stroke-width="6" stroke-linecap="round"/>
+  <path d="M210 349H270" stroke="#E9FFF8" stroke-opacity="0.34" stroke-width="5" stroke-linecap="round"/>
+</svg>
